@@ -3,6 +3,10 @@
 A small browser runner game built with **HTML, CSS, and JavaScript**.  
 This is one of my first experiments with creating a game in JS, made about a year ago, added here as part of my portfolio.
 
+## 🌐 Live Demo
+
+Try the game in your browser: [BluCube Rush on Vercel](https://your-vercel-link.vercel.app)
+
 ---
 
 ## 📌 Notes
