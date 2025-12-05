@@ -8,7 +8,7 @@ This is one of my first experiments with creating a game in JS, made about a yea
 ## 📌 Notes
 
 This project is not polished — it's simply a snapshot of my early learning phase in JavaScript.  
-Added here to show progression in my coding journey. 
+Added here to show progression in my coding journey. <br>
 ⚠️ Note: The game was designed on Full HD screen (1920x1080).  
 On larger resolutions, some graphics or layout elements may not display perfectly.
 
