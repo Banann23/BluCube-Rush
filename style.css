@@ -1,0 +1,173 @@
+@font-face {
+    font-family: 'BubbleBaz';
+    src: url("fonts/bubblebaz.ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    font-family: "BubbleBaz";
+}
+
+#game {
+    width: auto;
+    height: 100vh;
+    border: 10px solid #2b2317;
+    box-sizing: border-box;
+    background-image: url("assets/forestMove.png");
+    position: relative;
+}
+
+#hero>img {
+    width: 8rem;
+    height: 9.5rem;
+    position: absolute;
+    bottom: 5rem;
+    left: 10rem;
+    z-index: 3;
+}
+
+.animateHeroJump {
+    animation: heroJump 0.5s;
+}
+
+.animateHeroCrouch {
+    animation: heroCrouch 0.5s;
+}
+
+/* Animation of hero jumping */
+@keyframes heroJump {
+    0% {
+        bottom: 5rem;
+    }
+
+    40% {
+        bottom: 20rem;
+    }
+
+    60% {
+        bottom: 20rem;
+    }
+
+    100% {
+        bottom: 5rem;
+    }
+}
+
+/* Animation of hero crouching */
+@keyframes heroCrouch {
+    0% {
+        height: 9.5rem;
+    }
+
+    20% {
+        height: 5.5rem;
+    }
+
+    40% {
+        height: 5.5rem;
+    }
+
+    60% {
+        height: 5.5rem;
+    }
+
+    80% {
+        height: 5.5rem;
+    }
+
+    100% {
+        height: 9.5rem;
+    }
+}
+
+#enemy-ground>img {
+    width: 8rem;
+    height: 9.5rem;
+    position: fixed;
+    bottom: 5.6rem;
+    left: 70rem;
+    z-index: 2;
+}
+
+#enemy-flying>img {
+    width: 8rem;
+    height: 4.5rem;
+    position: fixed;
+    bottom: 13rem;
+    left: 70rem;
+    z-index: 2;
+}
+
+/* Animation of enemy moving from right off-screen to left off-screen */
+@keyframes moveEnemy {
+    0% {
+        left: 100%;
+    }
+
+    100% {
+        left: -15rem;
+    }
+}
+
+.animateMoveEnemy {
+    animation: moveEnemy 1.4s linear infinite;
+}
+
+/* TOP */
+
+#top {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 1em 2em 0em 2em;
+}
+
+#bestScore,
+#instructionBlock {
+    color: #c8a46d;
+    text-shadow: 0px 0px 5px #5c4b31;
+    font-size: 2.5rem;
+}
+
+#top-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Score,
+#gameOver {
+    color: #c8a46d;
+    text-shadow: 0px 0px 5px #5c4b31;
+    font-size: 4.5rem;
+    margin-top: 2em;
+    text-align: center;
+}
+
+#startButton {
+    font-size: 2rem;
+    border: 0.4rem solid #c8a46d;
+    text-shadow: 0px 0px 5px #5c4b31;
+    box-shadow: 0px 0px 5px #5c4b31;
+    background-color: #009f3d00;
+    color: #c8a46d;
+    border-radius: 15px;
+    margin-top: 0.5em;
+    padding: 0.2em;
+}
+
+/* FLOOR */
+
+#floor {
+    background-color: #745e3e;
+    box-shadow: 0px -7.5px 15px #745e3e;
+    width: 100%;
+    height: 5rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+}

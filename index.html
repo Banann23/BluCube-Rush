@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> BluCube Rush </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+
+<body>
+
+    <div id="audio">
+        <audio id="bg-music" loop>
+            <source src="sounds/ElwynnForest.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="jump-sound">
+            <source src="sounds/Jump.ogg" type="audio/ogg">
+        </audio>
+        <audio id="500-sound">
+            <source src="sounds/Cheer.ogg" type="audio/ogg">
+        </audio>
+        <audio id="1000-sound">
+            <source src="sounds/LevelUp.ogg" type="audio/ogg">
+        </audio>
+        <audio id="critical-sound">
+            <source src="sounds/Critical.ogg" type="audio/ogg">
+        </audio>
+    </div>
+
+    <div id="message"
+        style="display:none; width: 100vw; height: 100vh; text-align: center; justify-content: center; align-items: center; background-color: black;">
+        <h1 style="color: white"> Please use a device with a larger screen to play the game. </h1>
+    </div>
+
+    <div id="game">
+        <div id="score">
+            <div id="top">
+                <p id="bestScore"> Best Score: <span id="bestScoreCounter"> 0 </span> </p>
+                <div id="top-center">
+                    <p id="Score"> Score: <span id="scoreCounter"> 0 </span> </p>
+                    <p id="gameOver" style="display:none;">GAME OVER</p>
+                    <button id="startButton"> Press W to start </button>
+                </div>
+                <p id="instructionBlock"> W-Jump &nbsp; S-Crouch </p>
+            </div>
+        </div>
+        <div id="hero"> <img src="assets/heroMove.gif" id="heroImage"> </div>
+        <div id="enemy-ground"> <img src="assets/enemyMove.gif" id="groundEnemyImage" class="animateMoveBlock"> </div>
+        <div id="enemy-flying"> <img src="assets/enemyFlyingMove.gif" id="flyingEnemyImage" class="animateMoveBlock">
+        </div>
+        <div id="floor"> </div>
+    </div>
+
+</body>
+
+<script>
+    function checkScreen() {
+        if (window.innerWidth < 800) {
+            document.getElementById("game").style.display = "none";
+            document.getElementById("message").style.display = "flex";
+        } else {
+            document.getElementById("game").style.display = "block";
+            document.getElementById("message").style.display = "none";
+        }
+    }
+
+    window.addEventListener("load", checkScreen);
+    window.addEventListener("resize", checkScreen);
+</script>
+
+<script type="text/JavaScript" src="main.js"> </script>
+
+</html>
